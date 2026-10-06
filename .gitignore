@@ -6,3 +6,5 @@ venv/
 .env
 *.tmp
 .DS_Store
+desktop.ini
+Thumbs.db

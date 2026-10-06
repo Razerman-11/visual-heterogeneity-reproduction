@@ -29,8 +29,16 @@ processor = SegformerImageProcessor.from_pretrained(model_name)
 model = SegformerForSemanticSegmentation.from_pretrained(model_name)
 model.eval()
 
-# 2. 读一张街景图（把这里的文件名换成你自己的图）
-image_path = "images/example_street.jpg"
+# 2. 读一张街景图（自动取 images 文件夹里的第一张）
+image_files = sorted(
+    f for f in os.listdir("images")
+    if f.lower().endswith((".jpg", ".jpeg", ".png"))
+)
+if not image_files:
+    print("【提示】images 文件夹里没有图片，请先放入街景图。")
+    raise SystemExit(1)
+image_path = os.path.join("images", image_files[0])
+print(f"正在处理：{image_path}")
 image = Image.open(image_path).convert("RGB")
 
 # 3. 预处理 + 推理

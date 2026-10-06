@@ -63,11 +63,12 @@ Following the paper's idea, heterogeneity = **the variance of the six indicators
 .
 ├── README.md
 ├── requirements.txt
+├── check_image_quality.py     # quality check for input images
 ├── step1_semantic_segmentation.py
 ├── step2_visual_indicators.py
 ├── step3_heterogeneity.py
 ├── images/                    # input street view images
-│   └── example_street.jpg
+│   └── street_01.png ... street_12.png
 └── outputs/                   # generated figures and tables
     ├── fig1_segmentation.png
     ├── fig2_indicators.png
@@ -75,6 +76,10 @@ Following the paper's idea, heterogeneity = **the variance of the six indicators
     ├── indicators.csv
     └── heterogeneity.csv
 ```
+
+> The `images/` folder contains **12 street view images** captured along one street sequence in Guangzhou, named in walking order.
+>
+> `images/` 文件夹里是广州同一条街道的 **12 张街景图**，按行走顺序命名。
 
 ---
 
