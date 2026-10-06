@@ -96,6 +96,18 @@ pip install -r requirements.txt
 
 ## How to run / 如何运行
 
+**Run everything at once / 一键跑完所有步骤**
+
+```bash
+run_all.bat
+```
+
+（双击 `run_all.bat` 即可。改了图片之后，用它重跑一遍，所有结果就都更新了。）
+
+---
+
+**Or run step by step / 或者一步步运行**
+
 **Step 1 — segment one image / 分割一张图**
 
 ```bash
